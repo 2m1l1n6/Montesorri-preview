@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montessori E-Learning</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-body d-flex flex-column h-100">
+    <nav class="navbar navbar-light sticky-top navbar-expand-sm  bg-white border-bottom border-primary border-2">
+        <div class="container-lg">
+          <a class="navbar-brand" href="#">
+              <img src="../../assets/MEL-COLOR.svg" alt="" height="48">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav  me-auto my-2 mx-3 my-md-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item  mx-3 mx-md-1">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> <span class="d-none d-md-inline-block">Home</span> </a>
+              </li>
+              <li class="nav-item mx-3 mx-md-1">
+                <a class="nav-link" href="#"><i class="bi bi-layers"></i> <span class="d-none d-md-inline-block">Materials</span></a>
+              </li>
+              <li class="nav-item mx-3 mx-md-1">
+                <a class="nav-link" href="#"><i class="bi bi-calendar-week"></i> <span class="d-none d-md-inline-block">Calendar</span></a>
+              </li>
+              <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-clipboard-data"></i> <span class="d-none d-md-inline-block">Reports</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Weekly report</a></li>
+                  <li><a class="dropdown-item" href="#">Monthly</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="d-flex nav-item dropdown mx-2 px-1">
+              <button class="dropdown-toggle btn-icon" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell"></i>
+                <span class="badge rounded-pill bg-danger">2</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small>3 month-days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small>And some small print.</small>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="d-flex nav-item px-1 mx-2 dropdown user-profile" >
+              <a class="dropdown-toggle bg-primary" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../../assets/001-boy.svg"  alt="me">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Subscription</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main class="py-5 px-2">
+      <div class="container-fluid px-1 px-md-3">
+        <h1 class="fw-light"> <i class="bi bi-calendar me-2"></i> Calendar</h1>
+        <div class="row mt-4 mb-3 justify-content-md-center g-3">
+          <div class="col-12 col-md-4 row g-2">
+            <div class="col">
+              <button class="w-100 btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-calendar me-2"></i> Calendars
+              </button>
+            </div>
+            <div class="col">
+              <button class="w-100 btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addEvent">
+              <i class="bi bi-plus-circle me-2"></i>Add event
+            </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 offset-md-4 row g-2">
+            <div class="d-inline col">
+              <select class="form-select input-bg-light" aria-label="Default select example">
+                <option selected>January</option>
+                <option value="1">Febreury</option>
+                <option value="2">...</option>
+                <option value="3">...</option>
+                <option value="3">December</option>
+              </select>
+            </div>
+            <div class="d-inline col">
+              <select class="form-select input-bg-light" aria-label="Default select example">
+                <option selected>2021</option>
+                <option value="1">2022</option>
+                <option value="2"> 2023</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Modal Add Event-->
+      <div class="modal fade" id="addEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEventLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addEventLabel">Add new event</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="event-title" placeholder="Event Title">
+                <label for="event-title">Event Title</label>
+              </div>
+              <div class="form-floating mb-4">
+                <textarea class="form-control" placeholder="Leave a comment here" id="event-description" style="height: 100px"></textarea>
+                <label for="event-description">Description</label>
+              </div> 
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="Attendance">
+                <label class="form-check-label" for="Attendance">Attendance required</label>
+              </div>
+              <hr class="dropdown-divider my-5">
+              <!-- Date --> 
+              <label class="form-label mx-2 mb-3 fs-5">Date and time</label>
+              <div class="row">
+                <div class="col-auto">
+                  <input type="date" class="form-control" placeholder="Date">
+                </div>
+              </div>
+              <hr class="dropdown-divider my-5">
+              <!-- Time --> 
+              
+              <div class="row">
+                <div class="col-auto">
+                  <label class="form-label mx-2 mb-3 fs-5">From:</label>
+                  <input id="event-time" class="form-control" type="time" value="13:30">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label mx-2 mb-3 fs-5">To:</label>
+                  <input id="event-time" class="form-control" type="time" value="14:30">
+                </div>
+              </div>
+              <hr class="dropdown-divider my-5">
+              <!-- recurrence -->
+              <label class="form-label mx-2 mb-3 fs-5">Recurrence</label>
+              <select class="form-select mb-4" aria-label="Recurrence">
+                <option selected>None</option>
+                <option value="1">Everyday</option>
+                <option value="2"> Every week</option>
+                <option value="3">Week days</option>
+                <option value="3">Custom</option>
+              </select>
+              
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">Sun</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Mon</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">Tue</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                <label class="form-check-label" for="inlineCheckbox4">Wed</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                <label class="form-check-label" for="inlineCheckbox5">Thu</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                <label class="form-check-label" for="inlineCheckbox6">Fri</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                <label class="form-check-label" for="inlineCheckbox7">Sat</label>
+              </div>
+              <hr class="dropdown-divider my-5">
+              <!-- Links -->
+              <label class="form-label mx-2 mb-3 fs-5">Links</label>
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="eventLink1" placeholder="Name">
+                    <label for="eventLink1">Name</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-8">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="eventLink1" placeholder="Link">
+                    <label for="eventLink1">Link </label>
+                  </div>
+                </div>
+              </div>
+              <a href="#"><i class="bi bi-plus-circle mx-2"></i>Add another link</a>
+              <hr class="dropdown-divider my-5">
+              <!-- Files -->
+              <label class="form-label mx-2 mb-3 fs-5">Attach files</label>
+              <div class="mb-3">
+                <input class="form-control mb-3" type="file" multiple>
+              </div>
+              <div class="d-flex text-muted pt-3 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-text me-3" viewBox="0 0 16 16">
+                  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                  <div class="d-flex justify-content-between">
+                    <span>File-document-class-math.pdf</span>
+                    <a href="#" class="text-danger">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex text-muted pt-3 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-text me-3" viewBox="0 0 16 16">
+                  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                  <div class="d-flex justify-content-between">
+                    <span>Second-File-document-class-math.pdf</span>
+                    <a href="#" class="text-danger">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <hr class="dropdown-divider my-5">
+              <!-- Calendar -->
+              <label class="form-label mx-2 mb-3 fs-5">Calendar</label>
+              <select class="form-select mb-4" aria-label="Calendars">
+                <option selected>Davinci</option>
+                <option value="1">My Personal Clases</option>
+                <option value="2"> Another calendar</option>
+                <option value="3">Third Calendar</option>
+              </select>
+              <hr class="dropdown-divider my-5">
+              <!-- Assigned -->
+              <label class="form-label mx-2 mb-3 fs-5 d-block">Assign to</label>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="assign-students-tab" data-bs-toggle="pill" data-bs-target="#assign-students" type="button" role="tab" aria-controls="assign-students" aria-selected="true">Students</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="assign-staff-tab" data-bs-toggle="pill" data-bs-target="#assign-staff" type="button" role="tab" aria-controls="assign-staff" aria-selected="false">Staff</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="assign-students" role="tabpanel" aria-labelledby="assign-students-tab">
+                  <ul class="list-group border border-1 border-light p-2">
+                    <div class="d-flex mb-2">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </div>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image ">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/101x101/?profile"  alt="">
+                      </div>
+                      <span>Group 1</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image ">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/102x102/?profile"  alt="">
+                      </div>
+                      <span>Group 2</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image ">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/103x103/?profile"  alt="">
+                      </div>
+                      <span>Group 3</span> 
+                    </li>
+                    <li class=" list-group-item disabled"><hr class="dropdown-divider"></li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="assign-staff" role="tabpanel" aria-labelledby="assign-staff-tab">
+                  <ul class="list-group border border-1 border-light p-2">
+                    <div class="d-flex mb-2">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </div>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Add Event end-->
+      <!-- Modal View Event-->
+      <div class="modal fade" id="editEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editEventLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editEventLabel">Math Class Davinci</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <label class="form-label mb-3 fs-5">Description</label>
+              <p class="mx-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque aperiam aliquid neque? Ipsum, magni est!</p>
+              
+              <p class="mx-3 fw-bold">Attendance required</p>
+              
+              <hr class="dropdown-divider my-4">
+              <!-- Date --> 
+              <label class="form-label mx-2 mb-3 fs-5">Date and time</label>
+              <p class="mx-3">Thursday 25<sup>th</sup> July, 2021</p>
+              <p class="mx-3"><span>08:00</span> - <span>10:00</span></p> 
+              <hr class="dropdown-divider my-4">
+              <!-- recurrence -->
+              <label class="form-label mx-2 mb-3 fs-5">Recurrence</label>
+              <p class="mx-3">Mon, Tue, Thu</p>
+              <hr class="dropdown-divider my-4">
+              <!-- Links -->
+              <label class="form-label mx-2 mb-3 fs-5">Links</label>
+              <ul class="mx-3">
+                <li class="my-3">
+                  <p class="mb-1">Montessorri Wikipedia</p>
+                  <a href="#">https://en.wikipedia.org/wiki/Montessori_education</a> </li>
+                <li class="my-3">
+                  <p class="mb-1">Adicional Info</p>
+                  <a href="#">https://www.fundacionmontessori.org/metodo-montessori.htm</a></li>
+              </ul>
+              <hr class="dropdown-divider my-4">
+              <!-- Files -->
+              <label class="form-label mx-2 mb-3 fs-5">Files</label>
+              <div class="d-flex text-muted pt-3 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-text me-3" viewBox="0 0 16 16">
+                  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                  <div class="d-flex justify-content-between">
+                    <span>File-document-class-math.pdf</span>
+                    <a href="#">Download</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex text-muted pt-3 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-text me-3" viewBox="0 0 16 16">
+                  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                  <div class="d-flex justify-content-between">
+                    <span>Second-File-document-class-math.pdf</span>
+                    <a href="#">Download</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end m-3 small">
+                <a href="#">Download all</a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal"><i class="bi bi-pencil-square me-2"></i>Edit</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal View Event end-->
+      <!-- offcanvas calendar -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h2 class="h2"><i class="bi bi-calendar me-2"></i> Calendars</h2>
+            <ul class="btn-toggle-nav list-unstyled fw-normal pt-4 small">
+              <li class="d-flex mb-4">
+                <a href="#createCalendar"  data-bs-dismiss="offcanvas"  data-bs-toggle="modal"><i class="bi bi-plus-circle me-2"></i>Add new Calendar</a> 
+              </li>
+              <li class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="calendar1">
+                  <label class="form-check-label" for="calendar1"><i class="bi bi-square-fill text-warning"></i>
+                    Davinci
+                  </label>
+                </div>
+              </li>
+              <li class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="calendar2">
+                  <label class="form-check-label" for="calendar2"> <i class="bi bi-square-fill text-primary"></i>
+                    Davinci - group 1
+                  </label>
+                </div>
+              </li>
+              <li class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="calendar3">
+                  <label class="form-check-label" for="calendar3"><i class="bi bi-square-fill text-secondary"></i>
+                    Davinci - group 2
+                  </label>
+                </div>
+              </li>
+              <li class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="calendar4">
+                  <label class="form-check-label" for="calendar4"><i class="bi bi-square-fill text-info"></i>
+                    Davinci - group 3
+                  </label>
+                </div>
+              </li>
+              <li class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="calendar4">
+                  <label class="form-check-label" for="calendar4"><i class="bi bi-square-fill text-danger"></i>
+                    Math clases
+                  </label>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <!-- offcanvas end -->
+      <!-- Modal Add calendar-->
+      <div class="modal fade" id="createCalendar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEventLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addEventLabel">Create new Calendar</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="calendar-title" placeholder="Calendar Title">
+                <label for="event-title">Calendar Title</label>
+              </div>
+              <hr class="dropdown-divider my-5">
+              <!-- Color -->
+              <label class="form-label mx-2 mb-3 fs-5">Color</label>
+              <input type="color" class="form-control form-control-color" value="#ee9c6a" >
+              <hr class="dropdown-divider my-5">
+              <!-- Assigned -->
+              <label class="form-label mx-2 mb-3 fs-5 d-block">Assign to</label>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="assign-students-tab" data-bs-toggle="pill" data-bs-target="#assign-students" type="button" role="tab" aria-controls="assign-students" aria-selected="true">Students</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="assign-staff-tab" data-bs-toggle="pill" data-bs-target="#assign-staff" type="button" role="tab" aria-controls="assign-staff" aria-selected="false">Staff</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="assign-students" role="tabpanel" aria-labelledby="assign-students-tab">
+                  <ul class="list-group border border-1 border-light p-2">
+                    <div class="d-flex mb-2">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </div>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image ">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/101x101/?profile"  alt="">
+                      </div>
+                      <span>Group 1</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image ">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/102x102/?profile"  alt="">
+                      </div>
+                      <span>Group 2</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image ">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/103x103/?profile"  alt="">
+                      </div>
+                      <span>Group 3</span> 
+                    </li>
+                    <li class=" list-group-item disabled"><hr class="dropdown-divider"></li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="assign-staff" role="tabpanel" aria-labelledby="assign-staff-tab">
+                  <ul class="list-group border border-1 border-light p-2">
+                    <div class="d-flex mb-2">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </div>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                      </div>
+                      <span>Mario Antonio Minaya</span>  
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                      </div>
+                      <span>Juancito Perez</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <input class="form-check-input me-3" type="checkbox" value="">
+                      <div class="user-list__image">
+                        <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                      </div>
+                      <span>Emilia Zapata Rochester</span> 
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Add calendar end-->
+      <div class="container-fluid px-1 px-md-3">
+        <div class="col-12">
+          <div class="calendar-month bg-white rounded shadow-sm h-100">
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Sun</span>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Mon</span>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Tue</span>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Wed</span>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Thu</span>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Fri</span>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <span class="text-muted small">Sat</span>
+              </div>
+            </div>
+
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">1</p>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">2</p>
+              </div>
+            </div>
+
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">3</p>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">4</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item  border-start border-3 border-danger"><a href="#editEvent" data-bs-toggle="modal" data-bs-target="#editEvent" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Da vinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">5</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-info"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+                <li class="month-day__item border-start border-3 border-info"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+                <li class="month-day__item border-start border-3 border-info"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">6</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-primary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">7</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-secondary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">8</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-warning"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">9</p>
+              </div>
+            </div>
+            
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">10</p>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">11</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item  border-start border-3 border-danger"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">12</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-info"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">13</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-primary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">14</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-secondary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">15</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-warning"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">16</p>
+              </div>
+            </div>
+
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">17</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-secondary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">18</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-warning"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">19</p>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">20</p>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">21</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item  border-start border-3 border-danger"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">22</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-info"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">23</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-primary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">24</p>
+              </div>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">25</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item  border-start border-3 border-danger"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">26</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-info"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">27</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-primary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">28</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-secondary"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">29</p>
+              </div>
+              <ul class="month-day__events">
+                <li class="month-day__item border-start border-3 border-warning"><a href="#" class="small fw-light"><span class="fw-bold me-1">8:00</span>Math Class Davinci</a> </li>
+              </ul>
+            </div>
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">30</p>
+              </div>
+            </div>
+
+            <div class="month-day col">
+              <div class="text-center mx-4">
+                <p class="fw-bold">31</p>
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+            <div class="month-day month-day--disable col">
+              <div class="text-center mx-4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </main>
+    <footer class="footer mt-auto py-3 bg-transparent">
+      <div class="container text-center">
+        <span class="text-muted">2021 - © Montessori E-Learning all rights reserved </span>
+      </div>
+  </footer>
+    <script src=""></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

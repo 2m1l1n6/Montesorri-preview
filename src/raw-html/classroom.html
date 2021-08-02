@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montessori E-Learning</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-body d-flex flex-column h-100">
+    <nav class="navbar navbar-light sticky-top navbar-expand-sm  bg-white border-bottom border-primary border-2">
+        <div class="container-lg">
+          <a class="navbar-brand" href="#">
+              <img src="../../assets/MEL-COLOR.svg" alt="" height="48">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav  me-auto my-2 mx-3 my-md-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item  mx-3 mx-md-1">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> <span class="d-none d-md-inline-block">Home</span> </a>
+              </li>
+              <li class="nav-item mx-3 mx-md-1">
+                <a class="nav-link" href="#"><i class="bi bi-layers"></i> <span class="d-none d-md-inline-block">Materials</span></a>
+              </li>
+              <li class="nav-item mx-3 mx-md-1">
+                <a class="nav-link" href="#"><i class="bi bi-calendar-week"></i> <span class="d-none d-md-inline-block">Calendar</span></a>
+              </li>
+              <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-clipboard-data"></i> <span class="d-none d-md-inline-block">Reports</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Weekly report</a></li>
+                  <li><a class="dropdown-item" href="#">Monthly</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="d-flex nav-item dropdown mx-2 px-1">
+              <button class="dropdown-toggle btn-icon" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell"></i>
+                <span class="badge rounded-pill bg-danger">2</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small>3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small>And some small print.</small>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="d-flex nav-item px-1 mx-2 dropdown user-profile" >
+              <a class="dropdown-toggle bg-primary" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://app.montessoriedtech.com/cdn/001-boy.svg"  alt="me">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Subscription</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main class="py-5 px-2 g-lg-1 ">
+      <div class="container-xxl">
+        <div class="row justify-content-md-center g-3 g-lg-4  g-xxl-5">
+          <div class="col-6 col-lg-3 order-1 order-lg-1">
+            <div class="bg-white mb-4 p-1 rounded shadow-sm classroom-select">
+              <div class="dropdown">
+                <div class="dropdown-toggle  p-2 d-flex align-items-center rounded" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="classroom-select__image ratio ratio-1x1" >
+                    <img src="https://app.montessoriedtech.com/cdn/001-boy.svg" alt="me">
+                  </div>
+                  <span class="classroom-select__name">
+                    <span class="fs-5">Davinci</span>
+                    <small class="text-muted">Grade 1 - 3</small>
+                  </span>
+                </div>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="user-list__image ">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/101x101"  alt="me">
+                    </div>
+                    <span>Another classroom</span>
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center active" href="#">
+                    <div class="user-list__image ">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/102x102"  alt="me">
+                    </div>
+                    <span>Davinci</span>
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="user-list__image ">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/103x103"  alt="me">
+                    </div>
+                    <span>Third classrroom</span>
+                  </a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-plus-circle mx-2"></i>Add new classroom</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-white p-2 mb-4 rounded shadow-sm user-list">
+              <ul class="list-group">
+                <li>
+                  <button class="btn btn-toggle align-items-center rounded my-1" data-bs-toggle="collapse" data-bs-target="#classroom-groups" aria-expanded="true">
+                    Groups
+                  </button>
+                  <div class="collapse show" id="classroom-groups">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image ">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/100x100"  alt="me">
+                        </div>
+                        <span>Group 1</span> 
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/101x101/?profile"  alt="me">
+                        </div>
+                        <span>Group 2</span> 
+                        <span class="badge bg-primary rounded-pill">2</span>
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/102x102/?profile"  alt="me">
+                        </div>
+                        <span>Group 3</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <a href="#"><i class="bi bi-plus-circle mx-2"></i>Add new group</a> 
+                      </li>
+                    </ul>
+                  </div>
+                </li> 
+                <li class=" list-group-item disabled"><hr class="dropdown-divider"></li>
+                <li>
+                  <button class="btn btn-toggle align-items-center rounded my-1 collapsed" data-bs-toggle="collapse" data-bs-target="#classroom-students" aria-expanded="false">
+                    Students
+                  </button>
+                  <div class="collapse" id="classroom-students">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/103x103/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/104x104/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/105x105/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <a href="#"><i class="bi bi-plus-circle mx-2"></i>Add new student</a> 
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-3 order-lg-2">
+            <div class="d-flex align-items-center mb-4">
+              <h1>Davinci</h1>
+              <small class="text-muted mx-3">Grade 1 - 3</small>
+              <button type="button" class="btn btn-outline-secondary btn-sm float-end ms-auto "><i class="bi bi-pencil-square"></i> Edit</button>
+            </div>
+            <div>
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Activities</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Attendance</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Planning</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Reports</a>
+                </li>
+              </ul>
+              
+              <div class="activities pt-4" >
+
+                <div class="mb-4 d-flex overflow-hidden  bg-white p-4 rounded shadow-sm">
+                  <a href="#" class="link-dashed col me-3 text-center py-3 rounded fs-5">
+                    <i class="bi bi-book d-block"></i> Create Homework
+                  </a>
+                  <a href="#" class="link-dashed col me-3 text-center py-3 rounded fs-5">
+                    <i class="bi bi-newspaper d-block"></i>Create news
+                  </a>
+                </div>
+                <div class="row justify-content-end align-items-center py-3">
+                  <div class="d-flex align-items-center py-2 col-12 col-sm-6 text-end">
+                    <label for="subjets" class="col-5 px-3">Subjects:</label>
+                    <select class="form-select input-bg-light" aria-label="Subjects" id="subjects">
+                      <option selected>All</option>
+                      <option value="1">Math</option>
+                      <option value="2">Biology</option>
+                      <option value="3">Language</option>
+                      <option value="4">Fisic</option>
+                      <option value="5">History</option>
+                      <option value="6">Informatic</option>
+                    </select>
+                  </div>
+                  <div class="d-flex align-items-center py-2 col-12 col-sm-6 text-end">
+                    <label for="order-by" class="col-5 px-3">Order by:</label>
+                    <select class="form-select input-bg-light" aria-label="Order by" id="order-by">
+                      <option selected>Recent</option>
+                      <option value="1">Not delivered</option>
+                      <option value="2">Delivered</option>
+                    </select>
+                  </div>
+                </div>
+                
+                
+                <div class="alert alert-primary" role="alert">
+                  <h4 class="alert-heading">National Siblins Day!</h4>
+                  <p>Siblings Day is a holiday recognized annually in some parts of the United States and Canada on April 10, and as Brothers and Sisters Day on May 31 in Europe.
+                  </p>
+                  <hr>
+                  <p class="mb-0">Be sure to hug your siblings today!</p>
+                </div>
+              </div>
+              <div class="bg-white p-3 rounded shadow-sm">
+                <h4 class="alert-heading">A Homework</h4>
+                  <p>Siblings Day is a holiday recognized annually in some parts of the United States and Canada on April 10, and as Brothers and Sisters Day on May 31 in Europe.
+                  </p>
+                  <hr>
+                  <p class="mb-0">Be sure to hug your siblings today!</p>
+                  <div class=" d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary">Review homework</button>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 order-2 order-lg-3">
+            <div class="bg-white p-2 rounded shadow-sm next-events">
+              <button class="btn btn-toggle align-items-center rounded my-1" data-bs-toggle="collapse" data-bs-target="#classroom-next-events" aria-expanded="true">
+                Next events
+              </button>
+              <div class="collapse show" id="classroom-next-events">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li class="mb-4">
+                    <h5 class="mb-1">8:00 - 9:00 </h5>
+                    <p class="mb-1">Zoom Meeting Earth Biosphere</p>
+                    <small>Davinci - Biology</small>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1">9:00 - 10:00 </h5>
+                    <p class="mb-1">Seesaw activity alphabet</p>
+                    <small>Grade 3 - Language</small>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1">14:00 - 15:30 </h5>
+                    <p class="mb-1">Logaritmit functions experiment demostration</p>
+                    <small>Juancito Pérez - Math</small>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center me-4">
+                    <a href="#"><i class="bi bi-calendar-week mx-2"></i> View full calendar</a> 
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-transparent">
+      <div class="container text-center">
+        <span class="text-muted">2021 - © Montessori E-Learning all rights reserved </span>
+      </div>
+  </footer>
+    <script src=""></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

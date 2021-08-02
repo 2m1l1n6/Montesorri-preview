@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montessori E-Learning</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-body d-flex flex-column h-100">
+    <nav class="navbar navbar-light sticky-top navbar-expand-sm  bg-white border-bottom border-primary border-2">
+        <div class="container-lg">
+          <a class="navbar-brand" href="#">
+              <img src="../../assets/MEL-COLOR.svg" alt="" height="48">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav  me-auto my-2 mx-3 my-md-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item  mx-3 mx-md-1">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> <span class="d-none d-md-inline-block">Home</span> </a>
+              </li>
+              <li class="nav-item mx-3 mx-md-1">
+                <a class="nav-link" href="#"><i class="bi bi-layers"></i> <span class="d-none d-md-inline-block">Materials</span></a>
+              </li>
+              <li class="nav-item mx-3 mx-md-1">
+                <a class="nav-link" href="#"><i class="bi bi-calendar-week"></i> <span class="d-none d-md-inline-block">Calendar</span></a>
+              </li>
+              <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-clipboard-data"></i> <span class="d-none d-md-inline-block">Reports</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Weekly report</a></li>
+                  <li><a class="dropdown-item" href="#">Monthly</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="d-flex nav-item dropdown mx-2 px-1">
+              <button class="dropdown-toggle btn-icon" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell"></i>
+                <span class="badge rounded-pill bg-danger">2</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small>3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small>And some small print.</small>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action dropdown-item">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">List group item heading</h5>
+                      <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="d-flex nav-item px-1 mx-2 dropdown user-profile" >
+              <a class="dropdown-toggle bg-primary" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://app.montessoriedtech.com/cdn/001-boy.svg"  alt="me">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Subscription</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main class="py-5 px-2 px-lg-5">
+      <div class="container-lg">
+        <div class="row gx-3 gx-lg-5">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Classrooms</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Da Vinci</li>
+            </ol>
+          </nav>
+          <div class="col-12 mb-4">
+            <div class="align-items-center mb-4 bg-white p-4 rounded shadow-sm border-start border-5 border-info">
+              <div class="row">
+                <div class="d-flex col-12 col-sm-auto">
+                  <div>
+                    <h1 class="fw-light">Da Vinci</h1>
+                    <span class="badge bg-light text-dark fw-light">Grade 1-3</span>
+                    <span class="badge bg-light text-dark fw-light">18 students</span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-auto mt-4 mt-sm-0 ms-auto d-flex align-items-center">
+                  <button type="button" class="btn btn-outline-secondary btn-sm "><i class="bi bi-pencil-square"></i> Edit classroom</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8 order-2 order-lg-1">
+            <div class="row justify-content-end align-items-center mb-3">
+              <div class="me-auto col-12 col-sm-auto">
+                <button class="col-12 col-sm-auto btn btn-primary dropdown-toggle me-sm-2 mb-2 mb-sm-0" type="button" id="create" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-plus-circle me-2"></i>Create</button>
+                <button class="col-12 col-sm-auto btn btn-info" type="button" id="attendance"><i class="bi bi-check2-square me-2"></i>Attendance</button>
+                <ul class="dropdown-menu" aria-labelledby="create">
+                  <li><a class="dropdown-item py-3" href="#"><i class="bi bi-newspaper me-2"></i>Create News</a></li>
+                  <li><a class="dropdown-item py-3" href="#"><i class="bi bi-calendar-event me-2"></i>Create Event</a></li>
+                  <li><a class="dropdown-item py-3" href="#"><i class="bi bi-book me-2"></i>Create Assignment</a></li>
+                </ul>
+              </div>
+              <div class="d-flex align-items-center py-2 col-12 col-sm-auto text-end">
+                <select class="form-select input-bg-light" aria-label="Subjects" id="subjects">
+                  <option selected>All</option>
+                  <option value="1">Math</option>
+                  <option value="2">Biology</option>
+                  <option value="3">Language</option>
+                  <option value="4">Fisic</option>
+                  <option value="5">History</option>
+                  <option value="6">Informatic</option>
+                </select>
+              </div>
+              <div class="d-flex align-items-center py-2 col-12 col-sm-auto text-end">
+                <select class="form-select input-bg-light" aria-label="Order by" id="order-by">
+                  <option selected>Recent</option>
+                  <option value="1">Graded</option>
+                  <option value="2">Ungraded</option>
+                </select>
+              </div>
+            </div>
+            <div class="alert alert-warning" role="alert">
+              <h4 class="alert-heading">Next Semester Materials on sale</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem consequuntur nam necessitatibus deserunt? Accusamus magnam animi error possimus explicabo et nostrum veritatis reprehenderit amet ad!
+              </p>
+            </div>
+            <div class="bg-white p-3 rounded shadow-sm">
+              <div class="d-flex mb-3 align-items-center">
+                <span class="text-muted small fw-light">Due time: 04/10/21</span>
+                <span class="small fw-light text-end ms-auto">Delivered: 7/12</span>
+              </div>
+              <h4 class="mb-3">2-digits Static Division</h4>
+              <p class="small">
+                1. Solve the equations on the attached file in your math notebook or the worksheet. <br>
+                2. Use the material to complete the activity <br>
+                3. Upload your work and pictures of the material here.
+              </p>
+              <button class="btn-link btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#details" aria-expanded="false" aria-controls="details">See details</button>
+              <div class="collapse" id="details">
+                <h5 class="mx-2 mt-5 mb-3 fw-light">Links</h5>
+                <ul>
+                  <li class="my-3">
+                    <p class="mb-1">Montessorri Wikipedia</p>
+                    <a href="#">https://en.wikipedia.org/wiki/Montessori_education</a> </li>
+                  <li class="my-3">
+                    <p class="mb-1">Adicional Info</p>
+                    <a href="#">https://www.fundacionmontessori.org/metodo-montessori.htm</a></li>
+                </ul>
+                <h5 class="mx-2 mt-5 mb-3 fw-light">Files</h5>
+                <div class="row g-3">
+                  <div class="col-12 col-md-3">
+                    <a href="#" class="d-flex align-items-center border p-3 rounded">
+                      <div class="text-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+                          <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                          <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"/>
+                        </svg>
+                      </div>
+                      <span class="text-truncate small ms-2">File-document-class-math.pdf</span> 
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <a href="#" class="d-flex align-items-center border p-3 rounded">
+                      <div class="text-info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                          <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                          <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                        </svg>
+                      </div>
+                      <span class="text-truncate small ms-2">PHOTO-12312-ABC.jpeg</span> 
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="col-12 col-md-4 order-1 order-lg-2">
+            
+            <div class="bg-white p-2 mb-4 rounded shadow-sm next-events">
+              <button class="btn btn-toggle align-items-center rounded my-1 collapsed" data-bs-toggle="collapse" data-bs-target="#classroom-next-events" aria-expanded="false">
+                Next events
+              </button>
+              <div class="collapse" id="classroom-next-events">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li class="mb-4">
+                    <h5 class="mb-1">8:00 - 9:00 </h5>
+                    <p class="mb-1">Zoom Meeting Earth Biosphere</p>
+                    <small>Davinci - Biology</small>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1">9:00 - 10:00 </h5>
+                    <p class="mb-1">Seesaw activity alphabet</p>
+                    <small>Grade 3 - Language</small>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1">14:00 - 15:30 </h5>
+                    <p class="mb-1">Logaritmit functions experiment demostration</p>
+                    <small>Juancito Pérez - Math</small>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center me-4">
+                    <a href="#"><i class="bi bi-calendar-week mx-2"></i> View full calendar</a> 
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-white p-2 mb-4 rounded shadow-sm user-list">
+              <ul class="list-group">
+                <li>
+                  <button class="btn btn-toggle align-items-center rounded my-1 collapsed" data-bs-toggle="collapse" data-bs-target="#classroom-teachers" aria-expanded="false">
+                    Teachers
+                  </button>
+                  <div class="collapse" id="classroom-teachers">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="me">
+                        </div>
+                        <span>Me</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/103x103/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/104x104/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <a href="#addTeacher" data-bs-toggle="modal" data-bs-target="#addTeacher"><i class="bi bi-plus-circle mx-2"></i>Add teacher</a> 
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class=" list-group-item disabled"><hr class="dropdown-divider"></li>
+                <li>
+                  <button class="btn btn-toggle align-items-center rounded my-1 collapsed" data-bs-toggle="collapse" data-bs-target="#classroom-groups" aria-expanded="false">
+                    Groups
+                  </button>
+                  <div class="collapse" id="classroom-groups">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li class="list-group-item d-flex align-items-center">
+                        <span>Group 1</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <span>Group 2</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <span>Group 3</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <a href="#addGroup" data-bs-toggle="modal" data-bs-target="#addGroup"><i class="bi bi-plus-circle mx-2"></i>Add new group</a> 
+                      </li>
+                    </ul>
+                  </div>
+                </li> 
+                <li class=" list-group-item disabled"><hr class="dropdown-divider"></li>
+                <li>
+                  <button class="btn btn-toggle align-items-center rounded my-1 collapsed" data-bs-toggle="collapse" data-bs-target="#classroom-students" aria-expanded="false">
+                    Students
+                  </button>
+                  <div class="collapse" id="classroom-students">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/103x103/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/104x104/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/105x105/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="me">
+                        </div>
+                        <span>Juancito Perez</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <div class="user-list__image">
+                          <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="me">
+                        </div>
+                        <span>Emilia Zapata Rochester</span> 
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <a href="#invitationStudent"  data-bs-toggle="modal" data-bs-target="#invitationStudent"><i class="bi bi-plus-circle mx-2"></i>Add new student</a> 
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Add Teacher-->
+        <div class="modal fade" id="addTeacher" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addTeacherLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add Teacher</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul class="list-group">
+                  <div class="d-flex mb-2">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </div>
+                  <li class="list-group-item  p-3">
+                    <a href="#invitationTeacher" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#invitationTeacher"><i class="bi bi-plus-circle me-2"></i>Send invitation to a teacher</a>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                    </div>
+                    <span>Mario Antonio Minaya</span>  
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                    </div>
+                    <span>Juancito Perez</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                    </div>
+                    <span>Emilia Zapata Rochester</span> 
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                    </div>
+                    <span>Mario Antonio Minaya</span>  
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                    </div>
+                    <span>Juancito Perez</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                    </div>
+                    <span>Emilia Zapata Rochester</span> 
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Add Teacher end-->
+        <!-- Modal Teacher invitation-->
+        <div class="modal fade" id="invitationTeacher" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="invitationTeacherLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Send Teacher Inivitation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" placeholder="Name">
+                  <label for="className">Name</label>
+                </div>
+                <div class="form-floating mb-4">
+                  <input type="email" class="form-control" id="g-email" placeholder="Email">
+                  <label for="className">Email</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Teacher invitation end-->
+        <!-- Modal Student invitation-->
+        <div class="modal fade" id="invitationStudent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="invitationStudent" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Send Student Inivitation to Da Vinci</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-floating mb-5">
+                  <input type="text" class="form-control" placeholder="Student Name">
+                  <label for="className">Student Name</label>
+                </div>
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" placeholder="Guardian Name">
+                  <label for="className">Guardian Name</label>
+                </div>
+                <div class="form-floating mb-4">
+                  <input type="email" class="form-control" id="g-email" placeholder="Guardian Email">
+                  <label for="className">Guardian Email</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Student invitation end-->
+        <!-- Modal Add group -->
+        <div class="modal fade" id="addGroup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGroup" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add Group to Da Vinci</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" placeholder="Group Name">
+                  <label for="className">Group Name</label>
+                </div>
+                <hr class="dropdown-divider my-5">
+                <label class="form-label mx-2 mb-3 fs-5 d-block">Select students</label>
+                <ul class="list-group border border-1 border-light mb-4 p-2">
+                  <div class="d-flex mb-2">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </div>
+                  <li class="list-group-item  p-3">
+                    <a href="#invitationStudent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#invitationStudent"><i class="bi bi-plus-circle me-2"></i>Send invitation to a Student</a>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                    </div>
+                    <span>Mario Antonio Minaya</span>  
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                    </div>
+                    <span>Juancito Perez</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                    </div>
+                    <span>Emilia Zapata Rochester</span> 
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/106x106/?profile"  alt="">
+                    </div>
+                    <span>Mario Antonio Minaya</span>  
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/107x107/?profile"  alt="">
+                    </div>
+                    <span>Juancito Perez</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox" value="">
+                    <div class="user-list__image">
+                      <img class="ratio ratio-1x1" src="https://source.unsplash.com/random/108x108/?profile"  alt="">
+                    </div>
+                    <span>Emilia Zapata Rochester</span> 
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Create group</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Add group end-->
+      </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-transparent">
+      <div class="container text-center">
+        <span class="text-muted">2021 - © Montessori E-Learning all rights reserved </span>
+      </div>
+  </footer>
+    <script src=""></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
